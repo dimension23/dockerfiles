@@ -8,7 +8,7 @@ Demonstration of **how not to code interactively**
 docker build -t gsl docker
 
 # Compile
-
+docker run -v source:/home gsl gcc -I /usr/include -L /usr/lib/ -lgsl -lgslcblas /home/src/bessel.c -o /home/bin/bessel
 
 # Run
 docker run -v source-dir:/home gsl /home/bin/bessel
@@ -16,7 +16,7 @@ docker run -v source-dir:/home gsl /home/bin/bessel
 
 ### Release 0.2.0 - Interactive Image
 
-Added bessel.py to run using jupyter/scipy-notebook both manually and interactively using python notebook
+Demonstrates the use of jupyter/scipy-notebook image to run calculations using Python, both using python command and interactively with python notebook.
 ```
 docker pull jupyter/scipy-notebook
 docker run -v source-dir:/home/jovyan/work -p 8888:8888 jupyter/scipy-notebook
