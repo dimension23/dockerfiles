@@ -34,3 +34,14 @@ Python 3.7.3 (default, Mar 27 2019, 22:11:17)
 [GCC 7.3.0] :: Anaconda, Inc. on linux
 Type "help", "copyright", "credits" or "license" for more information.
 ```
+
+### Release 0.4.0 - ipython Image
+
+A layer on top of Miniconda 3
+```
+# Build
+docker build -t ipython ipython
+
+# Run
+docker run -it ipython
+```
