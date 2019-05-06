@@ -8,7 +8,7 @@ Demonstration of **how not to code interactively**
 docker build -t gsl docker
 
 # Compile
-docker run -v source:/home gsl gcc -I /usr/include -L /usr/lib/ -lgsl -lgslcblas /home/src/bessel.c -o /home/bin/bessel
+docker run -v source-dir:/home gsl gcc -I /usr/include -L /usr/lib/ -lgsl -lgslcblas /home/src/bessel.c -o /home/bin/bessel
 
 # Run
 docker run -v source-dir:/home gsl /home/bin/bessel
@@ -20,4 +20,17 @@ Demonstrates the use of jupyter/scipy-notebook image to run calculations using P
 ```
 docker pull jupyter/scipy-notebook
 docker run -v source-dir:/home/jovyan/work -p 8888:8888 jupyter/scipy-notebook
+```
+
+### Release 0.3.0 - Base Python image using Miniconda 3 on Debian
+
+```
+# Build
+docker build -t miniconda3 miniconda3
+
+# Run
+docker run -it miniconda3 python
+Python 3.7.3 (default, Mar 27 2019, 22:11:17)
+[GCC 7.3.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
 ```
