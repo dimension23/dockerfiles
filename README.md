@@ -45,3 +45,19 @@ docker build -t ipython ipython
 # Run
 docker run -it ipython
 ```
+
+### Release 0.5.0 - Numpy Image for Dockerhub
+Build, tag, and push image to Dockerhub
+```
+# Build
+docker build -t numpy numpy
+
+# Run
+docker run -it numpy ipython
+
+# Tag
+docker tag numpy prashp/numpy:1.16.3
+
+# Push
+docker push prashp/numpy:1.16.3
+```
